@@ -1,0 +1,20 @@
+{
+  "name": "2BookAPI",
+  "version": "1.0.0",
+  "description": "Simple express app without using DB.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+    },
+  "keywords": [
+    "Nodejs",
+    "Expressjs",
+    "Web"
+  ],
+  "author": "Haqdad",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
