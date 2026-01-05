@@ -1,14 +1,16 @@
 {
-  "name": "1server",
+  "name": "2appLevelMiddleware",
   "version": "1.0.0",
-  "description": "My first express.js app",
+  "description": "",
   "main": "server.js",
   "scripts": {
+    "start": "node server.js",
     "dev": "node --watch server.js"
   },
   "keywords": [
     "Nodejs",
     "Expressjs",
+    "MERN Stack",
     "Web"
   ],
   "author": "Haqdad",

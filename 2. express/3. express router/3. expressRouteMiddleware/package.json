@@ -1,7 +1,7 @@
 {
   "name": "3expressRouteMiddleware",
   "version": "1.0.0",
-  "description": "Develoing my first API in Express without DATABASE, with route chaining and route middleware.",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",

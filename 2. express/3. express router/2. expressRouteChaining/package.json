@@ -1,7 +1,7 @@
 {
   "name": "2expressRouteChaining",
   "version": "1.0.0",
-  "description": "Develoing my first API in Express without DATABASE, with route chaining.",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
