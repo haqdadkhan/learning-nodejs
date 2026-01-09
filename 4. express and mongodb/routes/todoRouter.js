@@ -1,6 +1,6 @@
 //! --- import required modules ---
 const express = require("express")
-const ObjectId = require("mongodb")
+const { ObjectId } = require("mongodb")
 const { getDB } = require("../database")
 
 //! --- create router instance ---
@@ -81,6 +81,7 @@ todoRouter.delete("/:id", async (req, res) => {
         const result = await todos.deleteOne(
             { _id: new ObjectId(todo) }
         )
+        console.log("Server")
         // sending response
         res.json(result)
 
