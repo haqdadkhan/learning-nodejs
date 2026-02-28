@@ -78,7 +78,7 @@ authRouter.post("/login", async (req, res) => {
 
         if (!isMatch) {
             return res.status(401).json({
-                message: "Either email or password is incorrect"
+                message: "Invalid email or password"
             });
         }
 
