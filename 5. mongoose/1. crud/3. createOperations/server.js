@@ -3,8 +3,6 @@ const express = require("express")
 const mongoose = require("mongoose")
 const { connectDB } = require("./db")
 require("dotenv").config()
-const cors = require("cors")
-
 
 //! create app instance
 const PORT = process.env.PORT
@@ -70,14 +68,14 @@ const insertStudents = async () => {
     try {
         const result = await Student.insertMany([
             {
-                name: "Ahsan",
+                name: "Ali",
                 age: 28,
-                class: "12th Class",
+                class: "11th Class",
                 subjects: ["Biology", "Chemistry"]
             },
             {
-                name: "Abid",
-                age: 38,
+                name: "Abida",
+                age: 18,
                 class: "Graduation",
                 subjects: ["Accounting", "Finance"]
             },
@@ -88,6 +86,8 @@ const insertStudents = async () => {
         console.log("Error inserting Docs:", error.message)
     }
 }
+
+insertStudents()
 
 //! start the server
 app.listen(PORT, () => {
