@@ -38,10 +38,10 @@ const authorSchema = new mongoose.Schema(
             required: true,
             unique: true,
         },
-        book: {
+        books: [{
             type: mongoose.Schema.Types.ObjectId,
             ref: "Book",
-        }, // referenced schema doc
+        }], // referenced schema doc
     },
     { timestamps: true }
 )
@@ -50,22 +50,22 @@ const Author = mongoose.model("Author", authorSchema)
 //! create with modeling
 const createAuthor = async () => {
     try {
-        // create address
+        // create book
         const book = await Book.create({
             title: "Chloe's Life",
             content: "This book tells day-to-day life of Chloe."
         })
-        console.log("Address created:", book)
+        console.log("Book created:", book)
 
-        // create user
+        // create author
         const author = await Author.create({
             name: "Ali",
-            book: book._id,
+            books: [book._id],
         })
-        console.log("User created:", author)
+        console.log("Author created:", author)
 
     } catch (error) {
-        console.log("Error creating user:", error)
+        console.log("Error creating Author and Book:", error)
     }
 }
 
